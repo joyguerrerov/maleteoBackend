@@ -12,7 +12,7 @@ const {
 const { upload, uploadToCloudinary } = require('../middleware/file.middleware')
 // const { isAuth } = require('../middlewares/auth.middleware')
 
-guardianRouter.post("/", [upload.single("coverImage"), uploadToCloudinary], createGuardian);
+guardianRouter.post("/", createGuardian);
 guardianRouter.get("/", getAllGuardians);
 guardianRouter.get("/:id", getGuardianById);
 guardianRouter.put("/:id", updateGuardian);

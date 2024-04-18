@@ -12,7 +12,7 @@ const {
 const { upload, uploadToCloudinary } = require('../middleware/file.middleware')
 // const { isAuth } = require('../middlewares/auth.middleware')
 
-anuncioRouter.post("/", [upload.single("coverImage"), uploadToCloudinary], createAnuncio);
+anuncioRouter.post("/", createAnuncio);
 anuncioRouter.get("/", getAllAnuncios);
 anuncioRouter.get("/:id", getAnuncioById);
 anuncioRouter.put("/:id", updateAnuncio);

@@ -16,7 +16,7 @@ const createAnuncio = async (req, res, next) => {
 
 const getAllAnuncios = async (req, res, next) => {
     try {
-        const Anuncios = await Anuncio.find();
+        const anuncios = await Anuncio.find();
         res.status(200).json({
             status: 200,
             message: 'Has hecho un getAll en Anuncio',

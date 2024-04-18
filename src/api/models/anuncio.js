@@ -5,7 +5,7 @@ const anuncioSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    tipo_espacio: {
+    espacio: {
         type: String,
         required: true
     },
@@ -13,7 +13,7 @@ const anuncioSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    descripcion: {
+    propiedad: {
         type: String,
         required: true
     }

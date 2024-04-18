@@ -3,6 +3,7 @@ const { HTTPSTATUSCODE } = require("../../utils/httpStatusCode");
 
 const createGuardian = async (req, res, next) => {
     try {
+        console.log(req.body);
         const guardian = await Guardian.create(req.body);
         res.status(201).json({
             status: 201,
