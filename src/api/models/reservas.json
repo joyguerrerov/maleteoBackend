@@ -1,7 +1,8 @@
 {
+    "cuidad":"",
     "ubicacion":"",
-    "retirada":"",
-    "fecha":"",
     "estado":"",
-    "deposito":""
+    "deposito":"",
+    "retirada":"",
+    "numero_equipaje":""
 }

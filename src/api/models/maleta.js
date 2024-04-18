@@ -1,13 +1,18 @@
 const mongoose = require('mongoose');
 const maletaSchema = new mongoose.Schema({
-    email: {
-        type: String, trim: true, required: true
-    },
+
     id: {
         type: String,
         required: true
     },
-    N_equipaje: {
+    nombre: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String, trim: true, required: true
+    },
+    numero_equipaje: {
         type: Number,
         required: true
     }

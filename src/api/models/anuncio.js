@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 const anuncioSchema = new mongoose.Schema({
+
+    nombre: {
+        type: String,
+        required: true
+    },
     tipo_espacio: {
         type: String,
         required: true

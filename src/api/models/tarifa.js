@@ -1,7 +1,13 @@
+const { text } = require('express');
 const mongoose = require('mongoose');
 const tarifasSchema = new mongoose.Schema({
+
+    tipo: {
+        type: String,
+        required: true
+    },
     tiempo: {
-        type: Number,
+        type: String,
         required: true
     },
     precio: {

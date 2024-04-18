@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const usuarioSchema = new mongoose.Schema({
-    email: {
-        type: String, trim: true, required: true
-    },
+
     nombre: {
         type: String,
         required: true
@@ -11,12 +9,16 @@ const usuarioSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    contraseña: {
-        type: String, trim: true, required: true
+    email: {
+        type: String, trim: true,
+        required: true
     },
     fecha_nacimiento: {
-        type: Number,
+        type: Date,
         required: true
+    },
+    contraseña: {
+        type: String, trim: true, required: true
     }
 })
 const Usuario = mongoose.model('Usuario', usuarioSchema);

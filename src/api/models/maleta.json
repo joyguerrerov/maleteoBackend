@@ -1,5 +1,6 @@
 {
-    "email":"",
     "id":"",
-    "N_equipaje":""
+    "nombre": "",
+    "email":"",
+    "numero_equipaje":""
 }

@@ -3,6 +3,7 @@ const { HTTPSTATUSCODE } = require("../../utils/error.util");
 
 const createUbicacion = async (req, res, next) => {
     try {
+        console.log(req.body);
         const ubicacion = await Ubicacion.create(req.body);
         res.status(201).json({
             status: 201,

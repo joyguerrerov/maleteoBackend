@@ -1,23 +1,28 @@
 const mongoose = require('mongoose');
 const reservaSchema = new mongoose.Schema({
+
+    cuidad: {
+        type: String,
+        required: true
+    },
     ubicacion: {
-        type: Number,
-        required: true
-    },
-    retirada: {
-        type: Number,
-        required: true
-    },
-    fecha: {
-        type: Number,
-        required: true
-    },
-    deposito: {
-        type: Number,
+        type: String,
         required: true
     },
     estado: {
         type: String,
+        required: true
+    },
+    deposito: {
+        type: Date,
+        required: true
+    },
+    retirada: {
+        type: Date,
+        required: true
+    },
+    numero_equipaje: {
+        type: Number,
         required: true
     }
 })

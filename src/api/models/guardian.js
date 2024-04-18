@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
 const guardianSchema = new mongoose.Schema({
+
+    id: {
+        type: String,
+        required: true
+    },
+    nombre: {
+        type: String,
+        required: true
+    },
     ubicacion: {
         type: String,
         required: true
@@ -13,24 +22,20 @@ const guardianSchema = new mongoose.Schema({
         required: true
     },
     horario: {
-        type: Number,
+        type: Date,
         required: true
     },
     tarifa: {
         type: String,
         required: true
     },
-    id: {
-        type: Number,
-        required: true
-    },
     disponibilidad: {
         type: String,
         require: true,
     },
-    Usuario: {
-        type: String,
-        require: true,
+    email: {
+        type: String, trim: true,
+        required: true
     }
 })
 const Guardian = mongoose.model('Guardian', guardianSchema);
