@@ -9,6 +9,10 @@ const guardianSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    cuidad: {
+        type: String,
+        required: true
+    },
     ubicacion: {
         type: String,
         required: true
@@ -22,11 +26,11 @@ const guardianSchema = new mongoose.Schema({
         required: true
     },
     horario: {
-        type: Date,
+        type: String,
         required: true
     },
     tarifa: {
-        type: String,
+        type: Number,
         required: true
     },
     disponibilidad: {

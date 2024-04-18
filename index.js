@@ -59,8 +59,6 @@ app.use('/tarifa', tarifaRouter);
 app.use('/ubicacion', ubicacionRouter);
 app.use('/usuarios', usuarioRouter);
 
-// 3.3 el "coche escoba" -> cualquier ruta que no haya definido pasa por aquí
-
 
 // 4. MANEJO DE ERRORES
 app.use(notFoundHandler);
