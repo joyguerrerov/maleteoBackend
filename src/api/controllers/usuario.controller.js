@@ -64,8 +64,89 @@ const logout = (req, res, next) => {
     }
 };
 
+const createUsuario = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        const usuario = await Usuario.create(req.body);
+        res.status(201).json({
+            status: 201,
+            message: 'haz echo un post en Usuario',
+            data: usuario,
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+const getAllUsuarios = async (req, res, next) => {
+    try {
+        const usuarios = await Usuario.find();
+        res.status(200).json({
+            status: 200,
+            message: 'has hecho un getAll en Usuario',
+            data: usuarios,
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+const getUsuarioById = async (req, res, next) => {
+    try {
+        const usuario = await Usuario.findById(req.params.id);
+        if (usuario) {
+            res.status(200).json({
+                status: 200,
+                message: 'has hecho un get por id',
+                data: usuario,
+            });
+        } else {
+            res.status(404).json({ status: 404, message: "Usuario not found" });
+        }
+    } catch (error) {
+        next(error);
+    }
+};
+
+const updateUsuario = async (req, res, next) => {
+    try {
+        const usuario = await Usuario.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        });
+        if (usuario) {
+            res.status(200).json({
+                status: 200,
+                message: 'has hecho un update en Usuario',
+                data: usuario,
+            });
+        } else {
+            res.status(404).json({ status: 404, message: "Usuario not found" });
+        }
+    } catch (error) {
+        next(error);
+    }
+};
+
+const deleteUsuario = async (req, res, next) => {
+    try {
+        const usuario = await Usuario.findByIdAndDelete(req.params.id);
+        if (usuario) {
+            res.status(204).json({ status: 204, message: "Usuario deleted" });
+        } else {
+            res.status(404).json({ status: 404, message: "Usuario not found" });
+        }
+    } catch (error) {
+        next(error);
+    }
+};
+
 module.exports = {
     register,
     login,
-    logout
+    logout,
+    createUsuario,
+    getAllUsuarios,
+    getUsuarioById,
+    updateUsuario,
+    deleteUsuario
 };

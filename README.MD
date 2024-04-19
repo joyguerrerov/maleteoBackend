@@ -14,9 +14,13 @@ ver package.json para la lista completa de librerías.
 
 # INSTALACIÓN
 
-1. Descargar el resitorio a local
+1. Descargar el repositorio a local
 
 2. Instalar dependencias con: npm i
+
+3. Revisar si esta la carpeta .env
+
+4. Hacer un npm run dev
 
 # ENLACES
 
