@@ -22,6 +22,15 @@ ver package.json para la lista completa de librerías.
 
 4. Hacer un npm run dev
 
+# PASSWORD
+
+1. Contiene al menos una letra minúscula ('s').
+2. Contiene al menos una letra mayúscula ('P').
+3. Contiene al menos un dígito ('0').
+4. Contiene al menos un carácter especial de la lista proporcionada ('@').
+5. Tiene una longitud de entre 8 y 12 caracteres (8 caracteres en total).
+6. Ejemplo: P@ssw0rd
+
 # ENLACES
 
 - npmjs.com

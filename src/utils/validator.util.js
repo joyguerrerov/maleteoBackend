@@ -18,9 +18,9 @@ fecha: /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-
 
 */
 
-const validationPassword = (password) =>
+const validationContraseña = (contraseña) =>
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/.test(
-    password
+    contraseña
   );
 
 const validationEmail = (email) =>
@@ -29,7 +29,7 @@ const validationEmail = (email) =>
   );
 
 module.exports = {
-  validationPassword,
+  validationContraseña,
   validationEmail,
 };
 
