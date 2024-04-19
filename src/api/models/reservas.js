@@ -1,6 +1,14 @@
 const mongoose = require('mongoose');
 const reservaSchema = new mongoose.Schema({
 
+    nombre: {
+        type: String,
+        required: true
+    },
+    img: {
+        type: String,
+        required: true
+    },
     cuidad: {
         type: String,
         required: true
