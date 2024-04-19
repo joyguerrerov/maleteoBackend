@@ -3,5 +3,6 @@
     "apellidos":"",
     "email": "",
     "fecha_nacimiento":"",
-    "contraseña":""
+    "contraseña":"",
+    "notificacion":""
 }

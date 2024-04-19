@@ -3,5 +3,7 @@
     "imgUsuario": "#",
     "ciudad": "",
     "valoracion": "",
-    "direccion": ""
+    "direccion": "",
+    "latitud":"",
+    "longitud":""
 }

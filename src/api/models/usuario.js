@@ -18,7 +18,12 @@ const usuarioSchema = new mongoose.Schema({
         required: true
     },
     contraseña: {
-        type: String, trim: true, required: true
+        type: String, trim: true,
+        required: true
+    },
+    notificacion: {
+        type: Boolean,
+        required: false
     }
 });
 usuarioSchema.pre("save", function (next) {

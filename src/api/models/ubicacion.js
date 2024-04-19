@@ -21,6 +21,14 @@ const ubicacionSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    latitud: {
+        type: String,
+        required: true,
+    },
+    longitud: {
+        type: String,
+        required: true,
+    }
 })
 const Ubicacion = mongoose.model('Ubicacion', ubicacionSchema);
 module.exports = Ubicacion;
