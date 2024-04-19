@@ -43,7 +43,7 @@ const login = async (req, res, next) => {
         } else {
             return res.json({
                 status: 400,
-                message: "el contraseña es incorrecto",
+                message: "la contraseña es incorrecto",
                 data: null,
             });
         }
