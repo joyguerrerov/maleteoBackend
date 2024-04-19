@@ -22,7 +22,7 @@ ver package.json para la lista completa de librerías.
 
 4. Hacer un npm run dev
 
-# PASSWORD
+# CONTRASEÑA
 
 1. Contiene al menos una letra minúscula ('s').
 2. Contiene al menos una letra mayúscula ('P').

@@ -1,6 +1,6 @@
 /* 
 El objetivo de este módulo es comprobar si los datos que introduce el usuario son validos en forma, por ejemplo, si un email tiene la forma nombre@dominio.xxx
-o si un password cumple un mínimo de condiciones de seguridad, por ejemplo, el password del usuario deberá tener:
+o si un contraseña cumple un mínimo de condiciones de seguridad, por ejemplo, el contraseña del usuario deberá tener:
 
 - una letra minúscula.
 - una letra mayúscula.

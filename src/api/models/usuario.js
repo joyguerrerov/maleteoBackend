@@ -27,14 +27,14 @@ const usuarioSchema = new mongoose.Schema({
     }
 });
 // usuarioSchema.pre("save", function (next) {
-//     if (!validationPassword(this.password)) {
-//         return next(setError("404", "The password does not meet the requirements"));
+//     if (!validationcontraseña(this.contraseña)) {
+//         return next(setError("404", "The contraseña does not meet the requirements"));
 //     }
 //     if (!validationEmail(this.email)) {
 //         return next(setError("404", "The email is not correct"));
 //     }
 
-//     this.password = bcrypt.hashSync(this.password, 10);
+//     this.contraseña = bcrypt.hashSync(this.contraseña, 10);
 //     next();
 // });
 const Usuario = mongoose.model('Usuario', usuarioSchema);

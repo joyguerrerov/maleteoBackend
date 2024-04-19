@@ -26,8 +26,8 @@ const login = async (req, res, next) => {
     try {
         const usuarioInfo = await Usuario.findOne({ email: req.body.email });
         console.log(bcrypt.compareSync(req.body.contraseña, usuarioInfo.contraseña));
-        if (bcrypt.compareSync(req.body.password, usuarioInfo.password)) {
-            usuarioInfo.contraseña = "*************"; // ocultamos el dato password en la respuesta por seguridad
+        if (bcrypt.compareSync(req.body.contraseña, usuarioInfo.contraseña)) {
+            usuarioInfo.contraseña = "*************"; // ocultamos el dato contraseña en la respuesta por seguridad
             const token = jwt.sign(
                 {
                     id: usuarioInfo._id,
@@ -43,7 +43,7 @@ const login = async (req, res, next) => {
         } else {
             return res.json({
                 status: 400,
-                message: "el password es incorrecto",
+                message: "el contraseña es incorrecto",
                 data: null,
             });
         }
