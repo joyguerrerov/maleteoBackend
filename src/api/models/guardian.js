@@ -17,6 +17,10 @@ const guardianSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    fotoLugar: {
+        type: [String],
+        required: true
+    },
     descripcion: {
         type: String,
         required: true
