@@ -18,6 +18,10 @@ const guardianSchema = new mongoose.Schema({
         required: true
     },
     fotoLugar: {
+        type: String,
+        required: true
+    },
+    fotosLugar: {
         type: [String],
         required: true
     },
