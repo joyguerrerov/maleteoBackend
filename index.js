@@ -12,19 +12,19 @@ const reservaRouter = require('./src/api/routes/reservas.routes');
 const tarifaRouter = require('./src/api/routes//tarifa.routes');
 const ubicacionRouter = require('./src/api/routes/ubicacion.routes');
 const usuarioRouter = require('./src/api/routes/usuario.routes');
+const fichaRouter = require("./src/api/routes/ficha.routes");
 const { notFoundHandler, errorHandler } = require('./src/api/middleware/error.middleware');
 
-// 2. Config
-// 2.1 configuración de la app
-require("dotenv").config(); // desde aquí se cargan las var de entorno del .env, hasta aquí no existen
+
+require("dotenv").config();
 const PORT = process.env.PORT || 3002;
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // usar urlencode para las urls.
+app.use(express.urlencoded({ extended: true }));
 connectMongo();
 
-//configCloudinary();
-// 2.2 cabeceras (https://developer.mozilla.org/en-US/docs/Web/API/Headers)
+
+
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, PATCH");
     res.header("Access-Control-Allow-Credentials", true);
@@ -32,7 +32,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// 2.3 cors (https://developer.mozilla.org/es/docs/Web/HTTP/CORS)
+// 2.3 cors 
 app.use(cors()); // no hay restricciones
 /*
  * La linea inferior sería un ejemplo de uso de cors, en el que solo
@@ -40,8 +40,7 @@ app.use(cors()); // no hay restricciones
  * Este concepto se conoce como whitelisting
  */
 /* app.use(cors({
-  origin: ['http://localhost:3002', 'http://localhost:4200'],
-  credentials: true,
+  origin: ['http://localhost:3002'
 })); */
 
 // 3. ENDPOINTS
@@ -50,9 +49,10 @@ app.use(cors()); // no hay restricciones
 app.get("/", (req, res) => {
     res.send("Server is up");
 });
-// 3.2 las rutas de mis datos
+// 3.2 las rutas
 app.use('/anuncio', anuncioRouter);
 app.use('/guardian', guardianRouter);
+app.use('/ficha', fichaRouter);
 app.use('/maleta', maletaRouter);
 app.use('/reserva', reservaRouter);
 app.use('/tarifa', tarifaRouter);
@@ -65,7 +65,7 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 
-// 5. "ARRANCAR" EL SERVIDOR
+// 5. "ARRANCA" EL SERVIDOR
 app.listen(PORT, () => {
     console.log(`Server listening on port : ${PORT}`);
 });
